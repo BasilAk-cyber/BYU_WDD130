@@ -22,31 +22,34 @@ body {
 
 /* Center content */
 header, main, footer {
+    padding: 20px;
     width: 840px;
     margin: 0 auto;
 }
 
 /* Header styling */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    padding: 20px;
     position: relative;
 }
 
 .logo {
-    width: 100px;
+    width: 50px;
     height: auto;
 }
 
 /* Navigation styling */
-nav {
-    margin: 16px;
-    padding: 8px;
-    text-align: center;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-nav a {
+nav ul li a {
     color: var(--accent2-color);
     margin: 0 15px;
     text-decoration: none;
@@ -109,26 +112,69 @@ p {
     padding: 8px;
 }
 
-/* Adventure images (basic styling, layout later) */
-section img {
-    width: 150px;
-    height: auto;
-    margin: 10px;
+/* Adventure section */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
+.image-items {
+    text-align: center;
+}
+
+.image-items img {
+    height: 80px;
+    object-fit: cover;
+}
+
+.caption {
+    margin: 5px 0;
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+}
+
+/*history section styling*/
+
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.history p {
+    flex: 2;
+    line-height: 1.6;
+}
+.history img {
+    flex: 1;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
 /* Footer styling */
 footer {
     background-color: var(--secondary-color);
     color: var(--accent2-color);
     padding: 20px;
     text-align: center;
+    position: relative;
+    min-height: 70px;
 }
 
 .socialmedia a {
     text-decoration: none;
 }
 
-.socialmedia img {
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    position: absolute;
+    bottom:20px;
+    right:20px;
+}
+.social-links img {
     width: 30px;
-    margin: 0 10px;
+    vertical-align: middle;
 }
